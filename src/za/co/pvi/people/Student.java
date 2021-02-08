@@ -1,11 +1,9 @@
 package za.co.pvi.people;
 
-import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-
 import za.co.pvi.ageStatistics.AgeStatistic;
 
 public class Student extends Person {
@@ -86,7 +84,7 @@ public class Student extends Person {
 
 	Student highestYear;
 
-	public void getHighestYYear(List<Student> students) {
+	public void getHighestYear(List<Student> students) {
 		long hY = 0;
 
 		for (int i = 0; i < students.size(); i++) {
@@ -101,7 +99,9 @@ public class Student extends Person {
 
 	@Override
 	public String toString() {
-		return "Student [\nageStatistic: " + ageStatistic + super.toString() + "]";
+		return "Student [\nageStatistic: " + ageStatistic + "]";
+		//return "Student [\nageStatistic: " + ageStatistic + super.toString() + "]";
+
 	}
 
 }

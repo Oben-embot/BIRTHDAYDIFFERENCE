@@ -1,3 +1,4 @@
+
 package za.co.pvi.app;
 
 import java.util.ArrayList;
@@ -19,14 +20,26 @@ public class Appliction {
 		System.out.println(student);
 
 		for (int i = 0; i < 100; i++) {
-			System.out.println();
-			System.out.println("WELCOME TO BIRTHDAY DIFFERENCE");
-			System.out.println("Select from the Options below.");
-			System.out.println("1. register");
-			System.out.println("2. getHighetYear");
-			System.out.println("3. exit");
+			int option = 0;
 
-			int option = scan.nextInt();
+			for (;;) {
+				scan.nextLine();
+				try {
+					System.out.println();
+					System.out.println("WELCOME TO BIRTHDAY DIFFERENCE");
+					System.out.println("Select from the Options below.");
+					System.out.println("1. register");
+					System.out.println("2. getHighetYear");
+					System.out.println("3. exit");
+
+					option = scan.nextInt();
+					break;
+				} catch (Exception ex) {
+					//System.out.println("Select from the Options below.");
+				} // end of the catch block
+
+			} // end of infinite for loop
+
 			if (option == 1) {
 				student = new Student();
 				System.out.println("\nFor Employee to register.");
@@ -35,8 +48,18 @@ public class Appliction {
 				String surname = scan.nextLine();
 				System.out.println("Enter firstName: ");
 				String firstName = scan.nextLine();
-				System.out.println("Enter Date Of Birth(Year-Month-day): ");
-				String dateOfBirth = scan.nextLine();
+
+				String dateOfBirth;
+				for (;;) {
+					scan.nextLine();
+					try {
+						System.out.println("Enter Date Of Birth(Year-Month-day): ");
+						dateOfBirth = scan.nextLine();
+						break;
+					} catch (Exception ex) {
+						System.out.println("Enter Date Of Birth(Year-Month-day): ");
+					}
+				}
 				System.out.println("Enter idNumber: ");
 				String idNumber = scan.nextLine();
 				System.out.println("Enter gender: ");
@@ -48,17 +71,16 @@ public class Appliction {
 				System.out.println(students);
 
 			} // end of if statement for option 1
-			
+
 			if (option == 2) {
-                System.out.println("Highest Year");
-                student.getHighestYYear(students);
-                
-			}else if (option == 3) {
+				System.out.println("Highest Year");
+				student.getHighestYear(students);
+
+			} else if (option == 3) {
 				System.out.println("<<<<<<<<<<<To Exit>>>>>>>>>>");
 				System.exit(0);
-				
-			}			
-			
+
+			}
 
 		} // end of the main for loop
 

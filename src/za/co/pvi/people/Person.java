@@ -69,11 +69,11 @@ public abstract class Person {
 		this.gender = gender;
 	}
 
-	@Override
-	public String toString() {
-		return "Person [\nsurname: " + surname + "\nfirstName: " + firstName + "\ndateOfBirth: " + dateOfBirth
-				+ "\nidNumber: " + idNumber + "\nemailAddress: " + emailAddress + "\ncellPhoneNumber: "
-				+ cellPhoneNumber + "\ngender: " + gender + "]";
-	}
+//@Override
+//	public String toString() {
+//		return "Person [\nsurname: " + surname + "\nfirstName: " + firstName + "\ndateOfBirth: " + dateOfBirth
+//				+ "\nidNumber: " + idNumber + "\nemailAddress: " + emailAddress + "\ncellPhoneNumber: "
+//				+ cellPhoneNumber + "\ngender: " + gender + "]";
+//	}
 
 }
